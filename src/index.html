@@ -1,0 +1,114 @@
+<!-- analyzer container -->
+<div id="container"></div>
+
+<div>
+  <label>Upload audio file
+    <input id="upload" type="file" accept="audio/*">Upload</input>
+  </label>
+  <audio id="audio" controls="controls">
+
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="waveform-container">
+  <div id="zoomview-container"></div>
+</div>
+<div class="waveform-container">
+  <div id="overview-container"></div>
+</div>
+</div>
+<div class="waveform">
+  <div id="zoomview"></div>
+</div>
+<div class="waveform">
+  <div id="overview"></div>
+</div>
+</div>
+<center>
+
+  <div id="controls">
+    <div>
+      <button id="zoomIn">Zoom in</button>
+      <button id="zoomOut">Zoom out</button>
+      <input type="text" id="seek-time" value="0.0">
+      <button data-action="seek">Seek</button>
+      <label for="amplitude-scale">Amplitude scale</label>
+      <input type="range" id="amplitude-scale" min="0" max="10" step="1">
+    </div>
+    <div>
+      <label for="mousewheel-mode">Mousewheel mode:</label>
+      <select id="mousewheel-mode">
+        <option value="none">None</option>
+        <option value="scroll">Scroll</option>
+      </select>
+      <input type="checkbox" id="auto-scroll" checked>
+      <label for="auto-scroll">Auto-scroll</label>
+      <input type="checkbox" id="playhead-time" checked>
+      <label for="playhead-time">Show playhead time</label>
+    </div>
+    <div>
+      <button id="segment">Add Segment</button>
+      <button id="point">Add Point</button>
+      <button data-action="log-data">Log segments/points</button>
+    </div>
+    <div>
+      <button data-action="resize">Resize</button>
+      <button data-action="toggle-zoomview">Show/hide zoomable waveform</button>
+      <button data-action="toggle-overview">Show/hide overview waveform</button>
+      <button data-action="destroy">Destroy</button>
+    </div>
+    <div>
+      <input type="checkbox" id="enable-seek" checked>
+      <label for="enable-seek">Enable click to seek</label>
+      <label for="waveform-drag-mode">Waveform drag mode:</label>
+      <select id="waveform-drag-mode">
+        <option value="scroll">Scroll</option>
+        <option value="insert-segment">Insert segment</option>
+      </select>
+    </div>
+    <div>
+      <input type="checkbox" id="enable-segment-dragging">
+      <label for="enable-segment-dragging">Enable segment dragging</label>
+      <label for="segment-drag-mode">Segment drag mode:</label>
+      <select id="segment-drag-mode">
+        <option value="overlap">Overlap</option>
+        <option value="no-overlap">No overlap</option>
+        <option value="compress">Compress</option>
+      </select>
+    </div>
+  </div>
+  </div>
+
+  <div class="log">
+    <div id="segments" class="hide">
+      <h2>Segments</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Label</th>
+            <th>Start time</th>
+            <th>End time</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="points" class="hide">
+      <h2>Points</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Label</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
