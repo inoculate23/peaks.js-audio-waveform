@@ -1,7 +1,7 @@
 The MIT License (MIT)
 
 Copyright (c) 2024 inoculate23 (https://codepen.io/inoculate23/pen/bGZgVEv)
-Fork of an original work Version 4.0.0 new features! (https://codepen.io/inoculate23/pen/bGZgVEv)
+Fork of an original work Peaks.js + Audio-Motion Analyzer (https://codepen.io/inoculate23/pen/bGZgVEv)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
